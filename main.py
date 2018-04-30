@@ -1,5 +1,6 @@
 from download_data import download_data
 import pandas as pd
+from pandas.plotting import scatter_matrix
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -11,6 +12,7 @@ from numpy import array, where
 from pylab import scatter, show, legend, xlabel, ylabel
 from scipy import stats
 from seaborn import palettes
+
 sns.set(style="white")
 sns.set(style="whitegrid", color_codes=True)
 
@@ -96,3 +98,9 @@ plt.show()
 print("Accuracy: ", acc)
 print("Per-class precision rate: ",arrP)
 print("Per-class recall rate: ",arrR)
+
+## print average number that succeeeded ##
+print(Y.mean())
+
+### ask user for the 5 categories to predict if project will be successful ###
+logisticRegr.predict_proba(kickstartData[524].reshape(1,-1))

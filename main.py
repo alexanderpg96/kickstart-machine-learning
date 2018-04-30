@@ -102,5 +102,5 @@ print("Per-class recall rate: ",arrR)
 ## print average number that succeeeded ##
 print(Y.mean())
 
-### ask user for the 5 categories to predict if project will be successful ###
+### Prediction of what will be successful ###
 logisticRegr.predict_proba(kickstartData[524].reshape(1,-1))
